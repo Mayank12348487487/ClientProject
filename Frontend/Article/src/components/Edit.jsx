@@ -15,7 +15,7 @@ const Edit = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/listings/${id}/edit`)
+    axios.get(`https://axethetax.onrender.com/${id}/edit`)
       .then((response) => {
         setTitle(response.data.title);
         setDescription(response.data.description);
@@ -72,7 +72,7 @@ const Edit = () => {
     };
 
     try {
-      const response = await axios.put(`http://localhost:8080/listings/${id}`, updatedArticle);
+      const response = await axios.put(`https://axethetax.onrender.com/listings/${id}`, updatedArticle);
       
       if (response.status === 200) {
         alert("Article updated successfully!");
