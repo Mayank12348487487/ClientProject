@@ -9,7 +9,7 @@ const CreateArticle = ({ setArticles }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [faq, setFaq] = useState([{ question: "", answer: "" }]);
-  const [loading, setLoading] = useState(false); // Loading state
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const modules = {
@@ -20,7 +20,7 @@ const CreateArticle = ({ setArticles }) => {
       ["clean"],
     ],
   };
-  
+
   const formats = [
     "header",
     "bold", "italic", "underline", "strike", "blockquote",
@@ -56,10 +56,8 @@ const CreateArticle = ({ setArticles }) => {
       faqs: faq.filter(({ question, answer }) => question.trim() && answer.trim()),
     };
 
-    console.log("📤 Sending Data to Backend:", JSON.stringify(newArticle, null, 2));
-
     try {
-      setLoading(true); // Show loader
+      setLoading(true);
       const response = await fetch("https://axethetax.onrender.com/listings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -67,26 +65,26 @@ const CreateArticle = ({ setArticles }) => {
       });
 
       const result = await response.json();
-      console.log("📥 Response from backend:", result);
-
       if (!response.ok) throw new Error(result.message || "Failed to publish article");
 
       setArticles((prev) => [...prev, result]);
-
       navigate("/articles");
     } catch (error) {
-      console.error("❌ Error:", error);
       alert(error.message || "Error publishing article!");
     } finally {
-      setLoading(false); // Hide loader after request is done
+      setLoading(false);
     }
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-md">
+    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-md relative">
       <h1 className="text-3xl font-bold mb-4">Create Article</h1>
 
-      {loading && <HashLoader />} {/* Show Loader when loading */}
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-75 rounded-md">
+          <HashLoader />
+        </div>
+      )}
 
       <input
         type="text"
@@ -94,7 +92,7 @@ const CreateArticle = ({ setArticles }) => {
         className="w-full p-2 border rounded mb-4"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        disabled={loading} // Disable input when loading
+        disabled={loading}
       />
 
       <div className="mb-4 p-4 border rounded">
@@ -107,7 +105,7 @@ const CreateArticle = ({ setArticles }) => {
           onChange={setDescription}
           placeholder="Write the article description here..."
           className="min-h-[200px] bg-white"
-          readOnly={loading} // Disable editor when loading
+          readOnly={loading}
         />
       </div>
 
