@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import SignInPage from "./routes/SignInPage";
 import SignUpPage from "./routes/SignUpPage";
 import CreateArticle from "./components/CreateArticle";
-import ShowArticles from "./components/showArticles";
+import ShowArticles from "./components/ShowArticles";
 import Edit from "./components/Edit";
 
 function App() {
