@@ -5,6 +5,7 @@ import { useUser } from "@clerk/clerk-react";
 import axios from "axios";
 import parse from "html-react-parser";
 import clientImage from "../components/images/client.jpg"
+import HashLoader from "./loader/HashLoader";
 
 const randomAuthors = [
   {
@@ -65,7 +66,7 @@ const ShowArticles = () => {
     }
   };
 
-  if (!article) return <p className="text-center text-xl">Loading...</p>;
+  if (!article) return <HashLoader/>;
 
   return (
     <motion.div className="min-h-screen flex flex-col lg:flex-row bg-gray-100 p-6">
