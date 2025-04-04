@@ -17,7 +17,7 @@ const Articles = () => {
     }
   
     if (isLoaded && userId) {
-      axios.get("http://localhost:8080/listings") // Ensure your backend is running
+      axios.get("https://axethetax.onrender.com/listings") // Ensure your backend is running
         .then((response) => {
           setArticles(response.data);
         })
