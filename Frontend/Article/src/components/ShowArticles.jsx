@@ -32,7 +32,7 @@ const ShowArticles = () => {
   const faqRefs = useRef([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/listings/${id}`)
+    axios.get(`https://axethetax.onrender.com/listings/${id}`)
       .then((response) => setArticle(response.data))
       .catch((error) => {
         console.error("Error fetching article:", error);
@@ -56,7 +56,7 @@ const ShowArticles = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8080/listings/${id}`);
+      await axios.delete(`https://axethetax.onrender.com/listings/${id}`);
       alert("Article deleted successfully!");
       navigate("/");
     } catch (error) {
