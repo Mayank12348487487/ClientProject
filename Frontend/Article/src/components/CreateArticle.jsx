@@ -60,7 +60,7 @@ const CreateArticle = ({ setArticles }) => {
 
     try {
       setLoading(true); // Show loader
-      const response = await fetch("http://localhost:8080/listings", {
+      const response = await fetch("https://axethetax.onrender.com/listings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newArticle),
