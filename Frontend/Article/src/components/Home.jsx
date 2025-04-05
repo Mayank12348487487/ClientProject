@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaNewspaper, FaChartLine, FaMoneyBillWave, FaBalanceScale, FaFileInvoiceDollar, FaBookOpen, FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import aboutImage from "../components/images/client.jpg"; // Update this path as necessary
 
 const Home = () => {
   return (
@@ -44,29 +45,32 @@ const Home = () => {
         <FeatureCard title="Income Strategies" description="Learn new ways to maximize your earnings." icon={<FaMoneyBillWave size={30} className="text-yellow-600" />} />
       </motion.div>
 
-      {/* About Section */}
-      <motion.div 
-        className="mt-16 relative bg-white p-8 rounded-lg shadow-lg max-w-4xl text-center overflow-hidden"
+      {/* About Section - Styled like uploaded image */}
+      <motion.div
+        className="mt-20 w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start bg-white rounded-xl shadow-lg overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
         <img 
-          src="/path-to-your-blue-gradient-image.png" 
-          alt="Background Shape"
-          className="absolute -z-10 top-0 left-0 w-full h-full object-cover opacity-50"
+          src={aboutImage} 
+          alt="Team working together" 
+          className="w-full md:w-1/2 h-full object-cover"
         />
 
-        <h2 className="text-2xl font-bold text-gray-800 relative z-10">About Sachin Mathani – Founder, Retmoe Tax Connect</h2>
-        <p className="mt-4 text-gray-600 relative z-10">
-          I am Sachin Mathani, a qualified Chartered Accountant from India with extensive experience in taxation. Over the years, I have handled a wide range of Income Tax Returns (ITRs) for both resident and non-resident individuals, including NRIs and foreign nationals.
-        </p>
-        <p className="mt-2 text-gray-600 relative z-10">
-          My expertise spans tax planning, tax-saving strategies, and advisory services tailored to individual and business needs. I also have substantial experience in managing foreign remittances and providing specialized tax consulting to non-residents.
-        </p>
-        <p className="mt-2 text-gray-600 relative z-10">
-          As the founder of Retmoe Tax Connect, my goal is to simplify taxation for clients across the globe and offer reliable, personalized tax solutions backed by deep domain knowledge and practical experience.
-        </p>
+        <div className="p-6 md:p-12 text-left w-full md:w-1/2">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
+          <p className="text-gray-700 mb-4">
+            As a Web Development Services We are Committed to Building Custom Web Solutions that Drive Business Success.
+          </p>
+          <p className="text-gray-700 mb-4">
+            At our web development agency, we specialize in crafting bespoke online solutions tailored to elevate businesses toward their digital objectives. Committed to continuous evolution, we remain abreast of cutting-edge web technologies and trends, ensuring a constant delivery of unparalleled excellence.
+          </p>
+          <p className="text-gray-700 mb-4">
+            Our ethos is rooted in equipping clients with the essential tools for triumph in the digital realm. We firmly believe in furnishing every business with a digital presence that authentically embodies their brand essence and effectively resonates with their target demographic.
+          </p>
+          <button className="mt-2 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Get in Touch</button>
+        </div>
       </motion.div>
 
       {/* Services Section */}
