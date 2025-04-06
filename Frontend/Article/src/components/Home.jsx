@@ -45,33 +45,34 @@ const Home = () => {
         <FeatureCard title="Income Strategies" description="Learn new ways to maximize your earnings." icon={<FaMoneyBillWave size={30} className="text-yellow-600" />} />
       </motion.div>
 
-      {/* About Section - Styled like uploaded image */}
-      <motion.div
-        className="mt-20 w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start bg-white rounded-xl shadow-lg overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        <img 
-          src={aboutImage} 
-          alt="Team working together" 
-          className="w-full md:w-1/2 h-full object-cover"
-        />
+{/* About Section - Updated with Icon and New Colors */}
+<motion.div
+  className="mt-20 w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl shadow-lg overflow-hidden"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1.5, duration: 1 }}
+>
+  <div className="flex justify-center items-center w-full md:w-1/2 h-full p-10">
+    <div className="bg-gradient-to-br from-purple-500 to-pink-500 text-white p-6 rounded-full shadow-lg">
+      <FaChartLine size={50} />
+    </div>
+  </div>
 
-        <div className="p-6 md:p-12 text-left w-full md:w-1/2">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
-          <p className="text-gray-700 mb-4">
-            As a Web Development Services We are Committed to Building Custom Web Solutions that Drive Business Success.
-          </p>
-          <p className="text-gray-700 mb-4">
-            At our web development agency, we specialize in crafting bespoke online solutions tailored to elevate businesses toward their digital objectives. Committed to continuous evolution, we remain abreast of cutting-edge web technologies and trends, ensuring a constant delivery of unparalleled excellence.
-          </p>
-          <p className="text-gray-700 mb-4">
-            Our ethos is rooted in equipping clients with the essential tools for triumph in the digital realm. We firmly believe in furnishing every business with a digital presence that authentically embodies their brand essence and effectively resonates with their target demographic.
-          </p>
-          <button className="mt-2 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Get in Touch</button>
-        </div>
-      </motion.div>
+  <div className="p-6 md:p-12 text-left w-full md:w-1/2">
+    <h2 className="text-3xl font-bold text-purple-800 mb-4">About Us</h2>
+    <p className="text-gray-700 mb-4">
+      As a Web Development Services, we are committed to building custom web solutions that drive business success.
+    </p>
+    <p className="text-gray-700 mb-4">
+      At our web development agency, we specialize in crafting bespoke online solutions tailored to elevate businesses toward their digital objectives. We stay ahead of the curve with evolving technologies and trends, ensuring excellence.
+    </p>
+    <p className="text-gray-700 mb-4">
+      Our ethos is rooted in equipping clients with the essential tools for digital triumph. Every business deserves a strong online presence that reflects its brand and reaches the right audience.
+    </p>
+    <button className="mt-2 px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">Get in Touch</button>
+  </div>
+</motion.div>
+
 
       {/* Services Section */}
       <motion.div 
