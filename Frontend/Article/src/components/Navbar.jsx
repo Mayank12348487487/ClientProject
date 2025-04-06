@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-gray-800">AxeTheTax</Link>
+        <Link to="/" className="text-2xl font-bold text-gray-800">RemoteTaxConnect</Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
