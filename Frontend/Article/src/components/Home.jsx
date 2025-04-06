@@ -29,7 +29,7 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        Stay updated with the latest news, trends, and insights on personal finance, investments, and income growth strategies.
+       Remote Tax Connect delivers expert guidance and daily tax updates—helping you stay compliant, save more, and stress less.
       </motion.p>
 
       {/* Explore Button */}
@@ -38,7 +38,7 @@ const Home = () => {
           className="mt-6 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:animate-bounce"
           whileTap={{ scale: 0.9 }}
         >
-          Explore Services
+          Explore Articles
         </motion.button>
       </Link>
 
