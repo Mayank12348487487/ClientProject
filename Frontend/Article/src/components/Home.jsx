@@ -20,7 +20,7 @@ const Home = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Welcome to Our Income Article News Site
+        Welcome to Remote Tax Connect Services
       </motion.h1>
 
       <motion.p 
@@ -86,15 +86,21 @@ const Home = () => {
         <div className="p-6 md:p-12 text-left w-full md:w-1/2">
           <h2 className="text-3xl font-bold text-purple-800 mb-4">About Us</h2>
           <p className="text-gray-700 mb-4">
-            As a Web Development Services, we are committed to building custom web solutions that drive business success.
+          I am Sachin Mathani, a qualified Chartered Accountant from India with extensive experience in taxation.
+
           </p>
           <p className="text-gray-700 mb-4">
-            At our web development agency, we specialize in crafting bespoke online solutions tailored to elevate businesses toward their digital objectives. We stay ahead of the curve with evolving technologies and trends, ensuring excellence.
+          My expertise spans tax planning, tax-saving strategies, and advisory services tailored to individual and business needs. I also have substantial experience in managing foreign remittances and providing specialized tax consulting to non-residents.
           </p>
           <p className="text-gray-700 mb-4">
-            Our ethos is rooted in equipping clients with the essential tools for digital triumph. Every business deserves a strong online presence that reflects its brand and reaches the right audience.
-          </p>
-          <button className="mt-2 px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">Get in Touch</button>
+          As the founder of Retmoe Tax Connect, my goal is to simplify taxation for clients across the globe and offer reliable, personalized tax solutions backed by deep domain knowledge and practical experience.          </p>
+          <button 
+  className="mt-2 px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition"
+  onClick={() => window.location.href = "mailto:sachinmathani@gmail.com?subject=Inquiry&body=Hi%20Sachin%2C"}
+>
+  Get in Touch
+</button>
+
         </div>
       </motion.div>
 
