@@ -20,7 +20,7 @@ const Home = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Welcome to Remote Tax Connect Services
+        Welcome to Remote Tax Connect 
       </motion.h1>
 
       <motion.p 
