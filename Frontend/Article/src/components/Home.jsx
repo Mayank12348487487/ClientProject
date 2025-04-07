@@ -69,40 +69,40 @@ const Home = () => {
         />
       </motion.div>
 
-      {/* About Section */}
-      <motion.div
-        id="about-section"
-        className="mt-20 w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl shadow-lg overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        <div className="flex justify-center items-center w-full md:w-1/2 h-full p-10">
-          <div className="bg-gradient-to-br from-purple-500 to-pink-500 text-white p-6 rounded-full shadow-lg">
-            <FaUsers size={50} />
-          </div>
-        </div>
-
-        <div className="p-6 md:p-12 text-left w-full md:w-1/2">
-          <h2 className="text-3xl font-bold text-purple-800 mb-4">About Us</h2>
-          <p className="text-gray-700 mb-4">
-          I am Sachin Mathani, a qualified Chartered Accountant from India with extensive experience in taxation.
-
-          </p>
-          <p className="text-gray-700 mb-4">
-          My expertise spans tax planning, tax-saving strategies, and advisory services tailored to individual and business needs. I also have substantial experience in managing foreign remittances and providing specialized tax consulting to non-residents.
-          </p>
-          <p className="text-gray-700 mb-4">
-          As the founder of Retmoe Tax Connect, my goal is to simplify taxation for clients across the globe and offer reliable, personalized tax solutions backed by deep domain knowledge and practical experience.          </p>
-          <button 
-  className="mt-2 px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition"
-  onClick={() => window.location.href = "mailto:sachinmathani@gmail.com?subject=Inquiry&body=Hi%20Sachin%2C"}
+     {/* About Section */}
+<motion.div
+  id="about-section"
+  className="mt-20 w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start bg-gradient-to-r from-blue-100 to-sky-100 rounded-xl shadow-lg overflow-hidden"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1.5, duration: 1 }}
 >
-  Get in Touch
-</button>
+  <div className="flex justify-center items-center w-full md:w-1/2 h-full p-10">
+    <div className="bg-gradient-to-br from-blue-600 to-sky-500 text-white p-6 rounded-full shadow-lg">
+      <FaUsers size={50} />
+    </div>
+  </div>
 
-        </div>
-      </motion.div>
+  <div className="p-6 md:p-12 text-left w-full md:w-1/2">
+    <h2 className="text-3xl font-bold text-blue-800 mb-4">About Us</h2>
+    <p className="text-gray-700 mb-4">
+      I am Sachin Mathani, a qualified Chartered Accountant from India with extensive experience in taxation.
+    </p>
+    <p className="text-gray-700 mb-4">
+      My expertise spans tax planning, tax-saving strategies, and advisory services tailored to individual and business needs. I also have substantial experience in managing foreign remittances and providing specialized tax consulting to non-residents.
+    </p>
+    <p className="text-gray-700 mb-4">
+      As the founder of Retmoe Tax Connect, my goal is to simplify taxation for clients across the globe and offer reliable, personalized tax solutions backed by deep domain knowledge and practical experience.
+    </p>
+    <button 
+      className="mt-2 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+      onClick={() => window.location.href = "mailto:sachinmathani@gmail.com?subject=Inquiry&body=Hi%20Sachin%2C"}
+    >
+      Get in Touch
+    </button>
+  </div>
+</motion.div>
+
 
       {/* Services Section */}
       <motion.div 
